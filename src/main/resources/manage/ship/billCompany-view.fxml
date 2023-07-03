@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneIndividualBill" opacity="0.93" prefHeight="562.0" prefWidth="498.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" styleClass="Prompt" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manage.ship.controllers.BillCompanyController">
+   <children>
+      <ImageView fitHeight="558.0" fitWidth="622.0" layoutX="-12.0" layoutY="2.0" opacity="0.32" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Picture/logo.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="59.0" layoutY="86.0" text="Company Name" textFill="WHITE">
+         <font>
+            <Font name="AIGDT" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="240.0" text="Weight" textFill="WHITE">
+         <font>
+            <Font name="AIGDT" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="290.0" text="Price Rs." textFill="WHITE">
+         <font>
+            <Font name="AIGDT" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="138.0" text="ID Number" textFill="WHITE">
+         <font>
+            <Font name="AIGDT" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="340.0" text="Date" textFill="WHITE">
+         <font>
+            <Font name="AIGDT" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="120.0" layoutY="26.0" prefHeight="42.0" prefWidth="276.0" text="Overseas Shipping" textAlignment="CENTER" textFill="#73d5ff">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="190.0" text="Category" textFill="WHITE">
+         <font>
+            <Font name="AIGDT" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="448.0" prefHeight="42.0" prefWidth="450.0" text="THANK YOU FOR JOIN WITH US" textAlignment="CENTER" textFill="#ff1e00">
+         <font>
+            <Font name="Century" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCustomerName" alignment="CENTER" layoutX="215.0" layoutY="137.0" prefHeight="35.0" prefWidth="258.0" style="-fx-background-color: #9EA1D4;" textFill="#d5ffdc">
+         <font>
+            <Font name="AIGDT" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCategory" alignment="CENTER" layoutX="215.0" layoutY="189.0" prefHeight="35.0" prefWidth="258.0" style="-fx-background-color: #9EA1D4;" textFill="#d5ffdc">
+         <font>
+            <Font name="AIGDT" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblWeight" alignment="CENTER" layoutX="215.0" layoutY="239.0" prefHeight="35.0" prefWidth="258.0" style="-fx-background-color: #9EA1D4;" textFill="#d5ffdc">
+         <font>
+            <Font name="AIGDT" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPrice" alignment="CENTER" layoutX="215.0" layoutY="289.0" prefHeight="35.0" prefWidth="258.0" style="-fx-background-color: #9EA1D4;" textFill="#d5ffdc">
+         <font>
+            <Font name="AIGDT" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" alignment="CENTER" layoutX="215.0" layoutY="339.0" prefHeight="35.0" prefWidth="258.0" style="-fx-background-color: #9EA1D4;" textFill="#d5ffdc">
+         <font>
+            <Font name="AIGDT" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="533.0" prefHeight="22.0" prefWidth="261.0" text="shippingmanageltd@gmail.com" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="319.0" layoutY="533.0" prefHeight="22.0" prefWidth="170.0" text="TEL:- 041 3421678" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboIndiId" layoutX="214.0" layoutY="86.0" prefHeight="35.0" prefWidth="258.0" promptText="SELECT COMPANY NAME" style="-fx-background-color: #9EA1D4;" />
+   </children>
+</AnchorPane>

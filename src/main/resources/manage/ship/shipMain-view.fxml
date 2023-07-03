@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="shipMainPane" prefHeight="576.0" prefWidth="1000.0" style="-fx-background-color: #263650; -fx-border-color: A58FAA;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manage.ship.controllers.ShipController">
+   <children>
+      <Button fx:id="btnCreg" graphicTextGap="2.0" layoutX="8.0" layoutY="58.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#showReg" prefHeight="83.0" prefWidth="194.0" style="-fx-background-color: #FFF9A3; -fx-border-color: #A58FAA; -fx-background-radius: 40; -fx-border-radius: 40;" text="REGISTER" textAlignment="CENTER" textFill="#252426" textOverrun="CLIP">
+         <font>
+            <Font name="Candara Bold" size="22.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnUpdate" graphicTextGap="2.0" layoutX="8.0" layoutY="172.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#showUpdate" prefHeight="83.0" prefWidth="194.0" style="-fx-background-color: #FFF9A3; -fx-border-color: A58FAA; -fx-background-radius: 40; -fx-border-radius: 40;" text="UPDATE" textAlignment="CENTER" textFill="#252426" textOverrun="CLIP">
+         <font>
+            <Font name="Candara Bold" size="22.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnAllShip" graphicTextGap="2.0" layoutX="8.0" layoutY="289.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#showAll" prefHeight="83.0" prefWidth="193.0" style="-fx-background-color: #FFF9A3; -fx-border-color: A58FAA; -fx-background-radius: 40; -fx-border-radius: 40;" text="ALL SHIPS" textAlignment="CENTER" textFill="#252426" textOverrun="CLIP">
+         <font>
+            <Font name="Candara Bold" size="22.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnManageShip" graphicTextGap="1.0" layoutX="8.0" layoutY="401.0" lineSpacing="2.0" mnemonicParsing="false" onAction="#showManage" prefHeight="83.0" prefWidth="194.0" style="-fx-background-color: #FFF9A3; -fx-border-color: A58FAA; -fx-background-radius: 40; -fx-border-radius: 40;" text="DELETE SHIPS" textAlignment="CENTER" textFill="#252426" textOverrun="CLIP">
+         <font>
+            <Font name="Candara Bold" size="22.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnBack" graphicTextGap="2.0" layoutX="54.0" layoutY="509.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#backMain" prefHeight="46.0" prefWidth="101.0" style="-fx-background-color: #1C9C47; -fx-background-radius: 30;" text="BACK" textAlignment="CENTER" textFill="#282525" textOverrun="CLIP">
+         <font>
+            <Font name="Candara Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Rectangle fx:id="rec1" arcHeight="5.0" arcWidth="5.0" fill="#fae73e" height="70.0" layoutX="207.0" layoutY="67.0" strokeType="INSIDE" width="7.0" />
+      <Rectangle fx:id="rec2" arcHeight="5.0" arcWidth="5.0" fill="#fae73e" height="70.0" layoutX="207.0" layoutY="181.0" strokeType="INSIDE" width="7.0" />
+      <Rectangle fx:id="rec3" arcHeight="5.0" arcWidth="5.0" fill="#fae73e" height="70.0" layoutX="207.0" layoutY="298.0" strokeType="INSIDE" width="7.0" />
+      <Rectangle fx:id="rec4" arcHeight="5.0" arcWidth="5.0" fill="#fae73e" height="70.0" layoutX="207.0" layoutY="410.0" strokeType="INSIDE" width="7.0" />
+      <AnchorPane fx:id="paneAllShip" layoutX="10.0" layoutY="10.0" opacity="0.93" prefHeight="576.0" prefWidth="780.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="271.0" layoutY="34.0" text="ALL SHIPS" textFill="#f9aa33">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblIdErrorUpdate" layoutX="238.0" layoutY="85.0" prefHeight="18.0" prefWidth="259.0" textFill="RED">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableShipAll" layoutX="27.0" layoutY="101.0" prefHeight="441.0" prefWidth="726.0" style="-fx-background-color: AAC4FF; -fx-border-color: E97777;" stylesheets="@style.css" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.600000000000023">
+               <columns>
+                  <TableColumn fx:id="shipID" editable="false" prefWidth="32.00001525878906" sortable="false" styleClass="Border2" text="ID" />
+                  <TableColumn fx:id="shipName" editable="false" prefWidth="98.39996337890625" sortable="false" styleClass="Border2" text="Ship Name" />
+                  <TableColumn fx:id="shipCountry" editable="false" prefWidth="96.79998779296875" sortable="false" styleClass="Border2" text="Belong Country" />
+                  <TableColumn fx:id="shipCompany" editable="false" prefWidth="120.800048828125" sortable="false" styleClass="Border2" text="Company Name" />
+                  <TableColumn fx:id="shipPhone" editable="false" prefWidth="104.0" sortable="false" styleClass="Border2" text="Phone" />
+                  <TableColumn fx:id="shipMail" prefWidth="96.79998779296875" styleClass="Border2" text="Email" />
+                  <TableColumn fx:id="shipCaptain" editable="false" prefWidth="100.800048828125" sortable="false" styleClass="Border2" text="Captain Name" />
+                  <TableColumn fx:id="shipDate" prefWidth="104.7999267578125" styleClass="Border2" text="Date" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneShipManage" layoutX="10.0" layoutY="10.0" opacity="0.93" prefHeight="576.0" prefWidth="780.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="271.0" layoutY="34.0" text="DELETE SHIPS" textFill="#f9aa33">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblIdErrorUpdate1" layoutX="548.0" layoutY="76.0" prefHeight="18.0" prefWidth="202.0" textFill="#40ff5d">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableDelDelete" layoutX="28.0" layoutY="101.0" prefHeight="368.0" prefWidth="725.0" style="-fx-background-color: AAC4FF; -fx-border-color: E97777;" stylesheets="@style.css" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="28.0">
+               <columns>
+                  <TableColumn fx:id="shipIDdel" editable="false" prefWidth="31.199966430664062" sortable="false" styleClass="Border2" text="ID" />
+                  <TableColumn fx:id="shipNamedel" editable="false" prefWidth="98.39996337890625" sortable="false" styleClass="Border2" text="Ship Name" />
+                  <TableColumn fx:id="shipCountrydel" editable="false" prefWidth="96.800048828125" sortable="false" styleClass="Border2" text="Belong Country" />
+                  <TableColumn fx:id="shipCompanydel" editable="false" prefWidth="111.2000732421875" sortable="false" styleClass="Border2" text="Company Name" />
+                  <TableColumn fx:id="shipPhonedel" editable="false" prefWidth="112.800048828125" sortable="false" styleClass="Border2" text="Phone" />
+                  <TableColumn fx:id="shipdelEmail" prefWidth="101.5999755859375" styleClass="Border2" text="Email" />
+                  <TableColumn fx:id="shipCaptaindel" editable="false" prefWidth="96.0" sortable="false" styleClass="Border2" text="Captain Name" />
+                  <TableColumn fx:id="shipDatedel" prefWidth="75.2001953125" styleClass="Border2" text="Date" />
+               </columns>
+            </TableView>
+            <Button fx:id="btnDelete" layoutX="532.0" layoutY="502.0" mnemonicParsing="false" onAction="#deleteShip" prefHeight="42.0" prefWidth="142.0" style="-fx-background-color: #402211; -fx-background-radius: 30; -fx-border-color: red; -fx-border-radius: 30;" text="DELETE" textFill="#f9aa33">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneShipRegister" layoutX="10.0" layoutY="10.0" opacity="0.93" prefHeight="576.0" prefWidth="780.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="85.0" layoutY="119.0" text="Ship Name" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="169.0" text="Belog Country" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="271.0" text="Phone" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="321.0" text="Email" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtShipName" layoutX="240.0" layoutY="120.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" styleClass="aaa">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtCountry" layoutX="240.0" layoutY="170.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtCompanyName" layoutX="240.0" layoutY="222.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtPhone" layoutX="240.0" layoutY="272.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtMail" layoutX="240.0" layoutY="322.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnSave" layoutX="286.0" layoutY="505.0" mnemonicParsing="false" onAction="#insert" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #402211; -fx-background-radius: 30;" text="SAVE" textFill="#f9aa33">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnClear" cache="true" layoutX="523.0" layoutY="505.0" mnemonicParsing="false" onAction="#clearReg" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #544f59; -fx-background-radius: 30;" text="CLEAR" textFill="#ffba52">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="85.0" layoutY="219.0" text="Company Name" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="427.0" text="Date" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dateShip" blendMode="DIFFERENCE" layoutX="240.0" layoutY="429.0" promptText="SELECT DATE" showWeekNumbers="true" style="-fx-background-color: red;" styleClass="date" stylesheets="@style.css">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </DatePicker>
+            <Label fx:id="lblErro" layoutX="490.0" layoutY="96.0" prefHeight="19.0" prefWidth="212.0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="216.0" layoutY="43.0" prefHeight="42.0" prefWidth="348.0" text="SHIP REGISTATION" textAlignment="CENTER" textFill="#f9aa33">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCoptainName" layoutX="240.0" layoutY="375.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <Label layoutX="84.0" layoutY="372.0" text="Captain Name" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblsuccessreg" layoutX="240.0" layoutY="96.0" prefHeight="19.0" prefWidth="212.0" textFill="#31fa52">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneShipRegisterUpdate" layoutX="10.0" layoutY="10.0" opacity="0.93" prefHeight="576.0" prefWidth="780.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ComboBox fx:id="comboShipName" layoutX="240.0" layoutY="123.0" prefHeight="26.0" prefWidth="270.0" promptText="SELECT SHIP NAME" style="-fx-background-color: #9EA1D4; -fx-border-color: #f9aa33;" styleClass="aaa" stylesheets="@style.css" />
+            <Label layoutX="85.0" layoutY="119.0" text="Ship Name" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="169.0" text="Belog Country" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="271.0" text="Phone" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="321.0" text="Email" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCountry1" layoutX="240.0" layoutY="170.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtCompanyName1" layoutX="240.0" layoutY="222.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtPhone1" layoutX="240.0" layoutY="272.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtMail1" layoutX="240.0" layoutY="322.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnSave1" layoutX="286.0" layoutY="505.0" mnemonicParsing="false" onAction="#updates" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #402211; -fx-background-radius: 30;" text="SAVE" textFill="#f9aa33">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnClear1" cache="true" layoutX="523.0" layoutY="505.0" mnemonicParsing="false" onAction="#clearReg" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #544f59; -fx-background-radius: 30;" text="CLEAR" textFill="#ffba52">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="85.0" layoutY="219.0" text="Company Name" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="427.0" text="Date" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dateShip1" blendMode="DIFFERENCE" layoutX="240.0" layoutY="429.0" promptText="SELECT DATE" showWeekNumbers="true" style="-fx-background-color: red;" styleClass="date" stylesheets="@style.css">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </DatePicker>
+            <Label fx:id="lblErro1" layoutX="500.0" layoutY="94.0" prefHeight="18.0" prefWidth="201.0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="172.0" layoutY="41.0" prefHeight="42.0" prefWidth="519.0" text="SHIP REGISTATION UPDATE" textAlignment="CENTER" textFill="#f9aa33">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCoptainName1" layoutX="240.0" layoutY="375.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <Label layoutX="84.0" layoutY="372.0" text="Captain Name" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSearchShip" layoutX="526.0" layoutY="122.0" mnemonicParsing="false" onAction="#serchUpdate" prefHeight="27.0" prefWidth="175.0" style="-fx-background-color: #160BBA; -fx-background-radius: 30;" text="SEARCH SHIPS" textFill="WHITE">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="lblsuccessUp" layoutX="240.0" layoutY="99.0" prefHeight="18.0" prefWidth="175.0" textFill="#4aff7d">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

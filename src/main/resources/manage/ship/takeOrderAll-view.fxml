@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneOrderAll" opacity="0.93" prefHeight="576.0" prefWidth="780.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="142.0" layoutY="34.0" prefHeight="42.0" prefWidth="477.0" text="INDIVIDUAL CUSTOMER ORDER" textFill="#f9aa33">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblIdErrorUpdate" layoutX="238.0" layoutY="85.0" prefHeight="18.0" prefWidth="259.0" textFill="RED">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableOrderAllIndividual" fixedCellSize="1.0" layoutX="28.0" layoutY="101.0" prefHeight="166.0" prefWidth="725.0" style="-fx-background-color: AAC4FF; -fx-border-color: E97777;" stylesheets="@style.css" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="28.0">
+         <columns>
+            <TableColumn fx:id="oIDIndividual" editable="false" prefWidth="55.19998359680176" sortable="false" styleClass="Border2" text="Order ID" />
+            <TableColumn fx:id="oNameIndividual" editable="false" prefWidth="133.60002899169922" sortable="false" styleClass="Border2" text="Name" />
+            <TableColumn fx:id="oIdNumberIndividual" editable="false" prefWidth="116.00006103515625" sortable="false" styleClass="Border2" text="ID Number" />
+            <TableColumn fx:id="oCategoryIndividual" editable="false" prefWidth="124.79998779296875" sortable="false" styleClass="Border2" text="Category" />
+            <TableColumn fx:id="oWeightIndividual" editable="false" prefWidth="105.60000610351562" sortable="false" styleClass="Border2" text="Weight" />
+            <TableColumn fx:id="oPriceIndividual" editable="false" prefWidth="111.20001220703125" sortable="false" styleClass="Border2" text="Price" />
+            <TableColumn fx:id="oDataIndividual" prefWidth="86.4000244140625" styleClass="Border2" text="Date" />
+         </columns>
+      </TableView>
+      <Label layoutX="142.0" layoutY="296.0" prefHeight="42.0" prefWidth="477.0" text="COMPANY CUSTOMER ORDER" textFill="#f9aa33">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableOrderAllCompany" fixedCellSize="1.0" layoutX="28.0" layoutY="356.0" prefHeight="166.0" prefWidth="725.0" style="-fx-background-color: AAC4FF; -fx-border-color: E97777;" stylesheets="@style.css">
+         <columns>
+            <TableColumn fx:id="oICompany" editable="false" prefWidth="55.19998359680176" sortable="false" styleClass="Border2" text="Order ID" />
+            <TableColumn fx:id="oNameCompany" editable="false" prefWidth="133.60002899169922" sortable="false" styleClass="Border2" text="Company Name" />
+            <TableColumn fx:id="oIdOrdererCompany" editable="false" prefWidth="116.00006103515625" sortable="false" styleClass="Border2" text="Orderer ID" />
+            <TableColumn fx:id="oCategoryCompany" editable="false" prefWidth="124.79998779296875" sortable="false" styleClass="Border2" text="Category" />
+            <TableColumn fx:id="oWeightCompany" editable="false" prefWidth="105.60000610351562" sortable="false" styleClass="Border2" text="Weight" />
+            <TableColumn fx:id="oPriceCompany" editable="false" prefWidth="111.20001220703125" sortable="false" styleClass="Border2" text="Price" />
+            <TableColumn fx:id="oDataCompany" prefWidth="86.4000244140625" styleClass="Border2" text="Date" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

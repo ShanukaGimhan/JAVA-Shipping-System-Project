@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane depthTest="ENABLE" nodeOrientation="LEFT_TO_RIGHT" prefHeight="560.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manage.ship.controllers.CustomerMainController">
+   <children>
+      <TableView fx:id="tableCompanyCustomer" layoutX="28.0" layoutY="137.0" prefHeight="352.0" prefWidth="723.0" style="-fx-background-color: AAC4FF; -fx-border-color: E97777;" stylesheets="@style.css" tableMenuButtonVisible="true" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.799999999999955">
+         <columns>
+            <TableColumn fx:id="tableCompanyID" editable="false" prefWidth="48.80002021789551" sortable="false" styleClass="companyBorder" text="ID" />
+            <TableColumn fx:id="tableCompanyName" editable="false" prefWidth="98.4000473022461" sortable="false" styleClass="companyBorder" text="Company Name" />
+            <TableColumn fx:id="tableCompanyAddress" editable="false" prefWidth="115.20001220703125" sortable="false" styleClass="companyBorder" text="Address" />
+            <TableColumn fx:id="tableCompanyPhone" editable="false" prefWidth="104.00006103515625" sortable="false" styleClass="companyBorder" text="phone" />
+            <TableColumn fx:id="tableCompanyEmail" editable="false" prefWidth="118.39999389648438" sortable="false" styleClass="companyBorder" text="Email" />
+            <TableColumn fx:id="tableCompanyOrdererDesignation" editable="false" prefWidth="94.39999389648438" sortable="false" styleClass="companyBorder" text="Desig. Orderer" />
+            <TableColumn fx:id="tableCompanyOrdererID" prefWidth="93.5999755859375" styleClass="companyBorder" text="Orderer ID" />
+            <TableColumn fx:id="tableCompanyDate" prefWidth="81.5999755859375" styleClass="companyBorder" text="Date" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

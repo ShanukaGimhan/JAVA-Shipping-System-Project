@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="customerMainPane" prefHeight="576.0" prefWidth="1000.0" style="-fx-background-color: #263650; -fx-border-color: A58FAA;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manage.ship.controllers.MainMenuController">
+   <children>
+      <ImageView fitHeight="468.0" fitWidth="1000.0" layoutX="-2.0" layoutY="102.0" opacity="0.13" pickOnBounds="true" smooth="false" AnchorPane.bottomAnchor="0.0">
+         <image>
+            <Image url="@Picture/logo.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="134.0" layoutY="125.0" text="MAIN MENU" textFill="#f4f4f4">
+         <font>
+            <Font name="Ebrima Bold" size="37.0" />
+         </font>
+      </Label>
+      <Label layoutX="657.0" layoutY="143.0" prefHeight="31.0" prefWidth="232.0" text="Shipping Countries" textFill="#f4f4f4">
+         <font>
+            <Font name="Eras Demi ITC" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="79.0" fitWidth="147.0" layoutX="607.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Picture/us.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="79.0" fitWidth="147.0" layoutX="790.0" layoutY="191.0" pickOnBounds="true">
+         <image>
+            <Image url="@Picture/au.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="79.0" fitWidth="147.0" layoutX="607.0" layoutY="310.0" pickOnBounds="true">
+         <image>
+            <Image url="@Picture/nz.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="79.0" fitWidth="147.0" layoutX="790.0" layoutY="311.0" pickOnBounds="true">
+         <image>
+            <Image url="@Picture/ca.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="79.0" fitWidth="147.0" layoutX="607.0" layoutY="432.0" pickOnBounds="true">
+         <image>
+            <Image url="@Picture/gb-eng.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="79.0" fitWidth="147.0" layoutX="790.0" layoutY="432.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@Picture/cn.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="832.0" layoutY="390.0" text="CANADA" textFill="#f6ffb9">
+         <font>
+            <Font name="AIGDT" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="839.0" layoutY="517.0" text="CHINA" textFill="#f6ffb9">
+         <font>
+            <Font name="AIGDT" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="664.0" layoutY="270.0" text="USA" textFill="#f6ffb9">
+         <font>
+            <Font name="AIGDT" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="658.0" layoutY="517.0" text="ENGLAND" textFill="#f6ffb9">
+         <font>
+            <Font name="AIGDT" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="820.0" layoutY="270.0" text="AUSTRALIA" textFill="#f6ffb9">
+         <font>
+            <Font name="AIGDT" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="627.0" layoutY="390.0" text="NEWZEALAND" textFill="#f6ffb9">
+         <font>
+            <Font name="AIGDT" size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCustomer" layoutX="80.0" layoutY="190.0" mnemonicParsing="false" onAction="#showCustomer" prefHeight="60.0" prefWidth="332.0" style="-fx-background-color: #46C2CB; -fx-background-radius: 30; -fx-border-color: #F2F7A1; -fx-border-radius: 30;" text="CUSTOMERS">
+         <font>
+            <Font name="Cambria Bold" size="31.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnShips" layoutX="80.0" layoutY="312.0" mnemonicParsing="false" onAction="#showShip" prefHeight="60.0" prefWidth="332.0" style="-fx-background-color: #46C2CB; -fx-background-radius: 30; -fx-border-color: #F2F7A1; -fx-border-radius: 30;" text="SHIPS">
+         <font>
+            <Font name="Cambria Bold" size="31.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnPayment" layoutX="80.0" layoutY="439.0" mnemonicParsing="false" onAction="#showOrder" prefHeight="60.0" prefWidth="332.0" style="-fx-background-color: #46C2CB; -fx-background-radius: 30; -fx-border-color: #F2F7A1; -fx-border-radius: 30;" text="TAKE ORDER">
+         <font>
+            <Font name="Cambria Bold" size="31.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="53.0" layoutY="36.0" prefHeight="43.0" prefWidth="809.0" text="OVERSEAS SHIPPING MANAGEMENT SYSTEM" textFill="#acd7ff">
+         <font>
+            <Font name="Bell MT Bold" size="35.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnLogOut" layoutX="893.0" layoutY="42.0" mnemonicParsing="false" onAction="#showLogin" prefHeight="32.0" prefWidth="87.0" style="-fx-background-color: red; -fx-background-radius: 30; -fx-border-color: white; -fx-border-radius: 30;" text="LOG OUT">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

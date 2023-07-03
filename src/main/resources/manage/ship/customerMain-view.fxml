@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="customerMainPane" prefHeight="576.0" prefWidth="1000.0" style="-fx-background-color: #263650; -fx-border-color: A58FAA;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manage.ship.controllers.CustomerMainController">
+   <children>
+      <Button fx:id="btnCreg" graphicTextGap="2.0" layoutX="8.0" layoutY="58.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#showReg" prefHeight="83.0" prefWidth="194.0" style="-fx-background-color: #FFF9A3; -fx-border-color: A58FAA; -fx-background-radius: 40; -fx-border-radius: 40;" text="REGISTER" textAlignment="CENTER" textFill="#252426" textOverrun="CLIP">
+         <font>
+            <Font name="Candara Bold" size="22.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnUpdate" graphicTextGap="2.0" layoutX="8.0" layoutY="172.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#showUpdate" prefHeight="83.0" prefWidth="194.0" style="-fx-background-color: #FFF9A3; -fx-border-color: A58FAA; -fx-background-radius: 40; -fx-border-radius: 40;" text="UPDATE" textAlignment="CENTER" textFill="#252426" textOverrun="CLIP">
+         <font>
+            <Font name="Candara Bold" size="22.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnAllCustomer" graphicTextGap="2.0" layoutX="8.0" layoutY="289.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#showAll" prefHeight="83.0" prefWidth="193.0" style="-fx-background-color: #FFF9A3; -fx-border-color: A58FAA; -fx-background-radius: 40; -fx-border-radius: 40;" text="ALL CUSTOMER" textAlignment="CENTER" textFill="#252426" textOverrun="CLIP">
+         <font>
+            <Font name="Candara Bold" size="22.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnManageUser" graphicTextGap="1.0" layoutX="8.0" layoutY="401.0" lineSpacing="2.0" mnemonicParsing="false" onAction="#showManege" prefHeight="83.0" prefWidth="194.0" style="-fx-background-color: #FFF9A3; -fx-border-color: A58FAA; -fx-background-radius: 40; -fx-border-radius: 40;" text="MANAGE " textAlignment="CENTER" textFill="#252426" textOverrun="CLIP">
+         <font>
+            <Font name="Candara Bold" size="22.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnBack" graphicTextGap="2.0" layoutX="54.0" layoutY="509.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#backMain" prefHeight="46.0" prefWidth="101.0" style="-fx-background-color: #1C9C47; -fx-background-radius: 30;" text="BACK" textAlignment="CENTER" textFill="#282525" textOverrun="CLIP">
+         <font>
+            <Font name="Candara Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Rectangle fx:id="rec1" arcHeight="5.0" arcWidth="5.0" fill="#fae73e" height="70.0" layoutX="207.0" layoutY="65.0" strokeType="INSIDE" width="7.0" />
+      <Rectangle fx:id="rec2" arcHeight="5.0" arcWidth="5.0" fill="#fae73e" height="70.0" layoutX="207.0" layoutY="179.0" strokeType="INSIDE" width="7.0" />
+      <Rectangle fx:id="rec3" arcHeight="5.0" arcWidth="5.0" fill="#fae73e" height="70.0" layoutX="207.0" layoutY="296.0" strokeType="INSIDE" width="7.0" />
+      <Rectangle fx:id="rec4" arcHeight="5.0" arcWidth="5.0" fill="#fae73e" height="70.0" layoutX="207.0" layoutY="408.0" strokeType="INSIDE" width="7.0" />
+      <AnchorPane fx:id="paneSelectCustomer" layoutX="10.0" layoutY="10.0" prefHeight="576.0" prefWidth="780.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="btnSelectIndi" blendMode="SOFT_LIGHT" layoutX="141.0" layoutY="168.0" mnemonicParsing="false" onAction="#showIndividual" prefHeight="120.0" prefWidth="509.0" style="-fx-background-color: #ffdde1; -fx-border-color: yellow; -fx-background-radius: 60; -fx-border-radius: 60;" text="INDIVIDUAL CUSTOMERS" textFill="#000a91">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button fx:id="btnSelectCm" blendMode="SOFT_LIGHT" layoutX="140.0" layoutY="360.0" mnemonicParsing="false" onAction="#showCompany" prefHeight="120.0" prefWidth="510.0" style="-fx-background-color: #ffdde1; -fx-border-color: yellow; -fx-background-radius: 60; -fx-border-radius: 60;" text="COMPANY CUSTOMERS" textFill="#000a91">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="164.0" layoutY="72.0" text="SELECT CUSTOMER TYPE" textFill="#f9aa33">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="customerRegCompanyPane" layoutX="10.0" layoutY="10.0" opacity="0.93" prefHeight="576.0" prefWidth="780.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="91.0" layoutY="47.0" text="COMPANY CUSTOMER REGISTATION" textFill="#f9aa33">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="135.0" text="Company Name" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="185.0" text="Address" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="234.0" text="Phone" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="284.0" text="Email" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCompanyName" layoutX="240.0" layoutY="136.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" styleClass="aaa">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtAddress" layoutX="240.0" layoutY="186.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtPhone" layoutX="240.0" layoutY="235.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtMail" layoutX="240.0" layoutY="285.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnSave" layoutX="286.0" layoutY="508.0" mnemonicParsing="false" onAction="#insertCm" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #402211; -fx-background-radius: 30;" text="SAVE" textFill="#f9aa33">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnClear" cache="true" layoutX="523.0" layoutY="508.0" mnemonicParsing="false" onAction="#clearRegCompany" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #544f59; -fx-background-radius: 30;" text="CLEAR" textFill="#ffba52">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="85.0" layoutY="442.0" text="Date" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dateCompany" blendMode="DIFFERENCE" layoutX="240.0" layoutY="444.0" promptText="SELECT DATE" showWeekNumbers="true" style="-fx-background-color: red;" styleClass="date" stylesheets="@style.css">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </DatePicker>
+            <Label fx:id="lblErro" layoutX="454.0" layoutY="112.0" prefHeight="19.0" prefWidth="251.0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="128.0" layoutY="331.0" text="Designation of Orderer" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtDesignation" layoutX="357.0" layoutY="334.0" prefHeight="27.0" prefWidth="343.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <Label layoutX="128.0" layoutY="385.0" text="ID Number of Orderer" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtIDNumber" layoutX="357.0" layoutY="388.0" prefHeight="27.0" prefWidth="343.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnSelectBackCompany" cache="true" layoutX="65.0" layoutY="508.0" mnemonicParsing="false" onAction="#backChoice" prefHeight="30.0" prefWidth="104.0" style="-fx-background-color: #A5F1E9; -fx-background-radius: 30;" text="BACK TO SELECT" textFill="#030302">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="lblSuccsess" layoutX="240.0" layoutY="112.0" prefHeight="19.0" prefWidth="179.0" textFill="#1ff21c">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="customerRegIndividualPane" layoutX="10.0" layoutY="10.0" opacity="0.93" prefHeight="576.0" prefWidth="780.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="85.0" layoutY="135.0" text="Full Name" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="185.0" text="Address" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="287.0" text="Phone" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="337.0" text="Email" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFullName" layoutX="240.0" layoutY="136.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" styleClass="aaa">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtAddress1" layoutX="240.0" layoutY="186.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtIDno" layoutX="240.0" layoutY="238.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtPhone1" layoutX="240.0" layoutY="288.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtMail1" layoutX="240.0" layoutY="338.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnSave1" layoutX="286.0" layoutY="482.0" mnemonicParsing="false" onAction="#Insert" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #402211; -fx-background-radius: 30;" text="SAVE" textFill="#f9aa33">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnClear1" cache="true" layoutX="523.0" layoutY="482.0" mnemonicParsing="false" onAction="#clearRegIndividual" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #544f59; -fx-background-radius: 30;" text="CLEAR" textFill="#ffba52">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="85.0" layoutY="235.0" text="ID Number" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="387.0" text="Date" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dateIndividual" blendMode="DIFFERENCE" layoutX="240.0" layoutY="388.0" promptText="SELECT DATE" showWeekNumbers="true" style="-fx-background-color: red;" styleClass="date" stylesheets="@style.css">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </DatePicker>
+            <Label fx:id="lblErro1" layoutX="490.0" layoutY="109.0" prefHeight="19.0" prefWidth="212.0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="70.0" layoutY="43.0" prefHeight="42.0" prefWidth="690.0" text="INDIVIDUAL CUSTOMER REGISTATION" textAlignment="CENTER" textFill="#f9aa33">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnBackIndividual" cache="true" layoutX="65.0" layoutY="482.0" mnemonicParsing="false" onAction="#backChoice" prefHeight="30.0" prefWidth="104.0" style="-fx-background-color: #7FE9DE; -fx-background-radius: 30;" text="BACK TO SELECT" textFill="#030302">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="lblSucessIndi" layoutX="240.0" layoutY="109.0" prefHeight="19.0" prefWidth="222.0" textFill="#2bff41">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="panecustomerUpdateIndividual" layoutX="10.0" layoutY="3.0" opacity="0.93" prefHeight="574.0" prefWidth="780.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="85.0" layoutY="242.0" text="Full Name" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="292.0" text="Address" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="341.0" text="Phone" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="391.0" text="Email" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtIndividualFullNameUpdate" layoutX="240.0" layoutY="243.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" styleClass="aaa">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtIndividualAddressUpdate" layoutX="240.0" layoutY="293.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtIndividualPhoneUpdate" layoutX="240.0" layoutY="342.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtIndividualMailUpdate" layoutX="240.0" layoutY="392.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnIndividualUpdateSave" layoutX="286.0" layoutY="510.0" mnemonicParsing="false" onAction="#updateIndividual" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #402211; -fx-background-radius: 30;" text="SAVE" textFill="#f9aa33">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnIndividualUpdateClear" cache="true" layoutX="523.0" layoutY="510.0" mnemonicParsing="false" onAction="#clearUpIndividual" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #544f59; -fx-background-radius: 30;" text="CLEAR" textFill="#ffba52">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="85.0" layoutY="191.0" text="ID Number" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="441.0" text="Date" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboIdNumberup" layoutX="240.0" layoutY="194.0" prefHeight="26.0" prefWidth="259.0" promptText="SELECT ID NUMBER" style="-fx-border-color: #f9aa33; -fx-background-color: #9EA1D4;" />
+            <DatePicker fx:id="dateIndividualUpdate" blendMode="DIFFERENCE" layoutX="240.0" layoutY="442.0" promptText="SELECT DATE" showWeekNumbers="true" style="-fx-background-color: red;" styleClass="date" stylesheets="@style.css">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </DatePicker>
+            <Label layoutX="212.0" layoutY="36.0" prefHeight="42.0" prefWidth="380.0" text="CUSTOMER UPDATE" textAlignment="CENTER" textFill="#f9aa33">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSelectIndividualCustomer" cache="true" layoutX="84.0" layoutY="103.0" mnemonicParsing="false" onAction="#showUpdateIndividual" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #D9CB50; -fx-background-radius: 30;" text="INDIVIDUAL CUSTOMER" textFill="#030302">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnSerchIndividualCustomer" layoutX="523.0" layoutY="194.0" mnemonicParsing="false" onAction="#serchUpdateIndividual" prefHeight="27.0" prefWidth="175.0" style="-fx-background-color: #160BBA; -fx-background-radius: 30;" text="SEARCH CUSTOMER" textFill="WHITE">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <AnchorPane fx:id="paneCompanyCustomerUpdate" layoutX="3.0" layoutY="152.0" prefHeight="418.0" prefWidth="762.0" style="-fx-background-color: #263650;">
+               <children>
+                  <Label layoutX="200.0" layoutY="204.0" text="Designation Of Orderer" textFill="WHITE">
+                     <font>
+                        <Font name="AIGDT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="105.0" layoutY="59.0" text="Address" textFill="WHITE">
+                     <font>
+                        <Font name="AIGDT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="105.0" layoutY="107.0" text="Phone" textFill="WHITE">
+                     <font>
+                        <Font name="AIGDT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="105.0" layoutY="155.0" text="Email" textFill="WHITE">
+                     <font>
+                        <Font name="AIGDT" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCompanyDesignationUpdate" layoutX="432.0" layoutY="205.0" prefHeight="27.0" prefWidth="290.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" styleClass="aaa">
+                     <font>
+                        <Font name="Arial Bold" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtCompanyAddressUpdate" layoutX="260.0" layoutY="60.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+                     <font>
+                        <Font name="Arial Bold" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtCompanyPhoneUpdate" layoutX="260.0" layoutY="108.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+                     <font>
+                        <Font name="Arial Bold" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtCompanyMailUpdate" layoutX="260.0" layoutY="156.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+                     <font>
+                        <Font name="Arial Bold" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtCompanyOrdererUpdate" layoutX="433.0" layoutY="255.0" prefHeight="27.0" prefWidth="290.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" styleClass="aaa">
+                     <font>
+                        <Font name="Arial Bold" size="13.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="btnCompanyUpdateSave" layoutX="306.0" layoutY="369.0" mnemonicParsing="false" onAction="#updateCompany" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #402211; -fx-background-radius: 30;" text="SAVE" textFill="#f9aa33">
+                     <font>
+                        <Font name="Candara Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnCompanyUpdateClear" layoutX="543.0" layoutY="369.0" mnemonicParsing="false" onAction="#clearUpCompany" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #544f59; -fx-background-radius: 30;" text="CLEAR" textFill="#ffba52">
+                     <font>
+                        <Font name="Candara Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label layoutX="105.0" layoutY="9.0" text="Company Name" textFill="WHITE">
+                     <font>
+                        <Font name="AIGDT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="105.0" layoutY="311.0" text="Date" textFill="WHITE">
+                     <font>
+                        <Font name="AIGDT" size="18.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="dataCompanyUpdate" blendMode="DIFFERENCE" layoutX="260.0" layoutY="312.0" promptText="SELECT DATE" showWeekNumbers="true" style="-fx-background-color: red;" styleClass="date" stylesheets="@style.css">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </DatePicker>
+                  <Button fx:id="btnSerchCompanyCustomer" layoutX="535.0" layoutY="12.0" mnemonicParsing="false" onAction="#selectUpdateCompany" prefHeight="27.0" prefWidth="186.0" style="-fx-background-color: #160BBA; -fx-background-radius: 30;" text="SEARCH COMPANY" textFill="WHITE">
+                     <font>
+                        <Font name="Candara Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label layoutX="200.0" layoutY="254.0" text="ID Number Of Orderer" textFill="WHITE">
+                     <font>
+                        <Font name="AIGDT" size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="comboCompanyNameup" layoutX="260.0" layoutY="13.0" prefHeight="26.0" prefWidth="259.0" promptText="SELECT COMPANY NAME" style="-fx-border-color: #f9aa33; -fx-background-color: #9EA1D4;" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="btnSelectCompanyCustomer" cache="true" layoutX="264.0" layoutY="103.0" mnemonicParsing="false" onAction="#ShowUpdateCompany" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #D9CB50; -fx-background-radius: 30;" text="COMPANY CUSTOMER" textFill="#030302">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Rectangle fx:id="rec11" arcHeight="5.0" arcWidth="5.0" fill="#fae73e" height="5.0" layoutX="96.0" layoutY="141.0" strokeType="INSIDE" width="126.0" />
+            <Rectangle fx:id="rec21" arcHeight="5.0" arcWidth="5.0" fill="#fae73e" height="5.0" layoutX="276.0" layoutY="141.0" strokeType="INSIDE" width="126.0" />
+            <Label fx:id="lblSuccessUUpdate" layoutX="511.0" layoutY="131.0" prefHeight="19.0" prefWidth="202.0" textFill="#4dff47">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblErrorUpdate" layoutX="511.0" layoutY="131.0" prefHeight="19.0" prefWidth="202.0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneCustomerManege" layoutX="10.0" layoutY="10.0" opacity="0.93" prefHeight="576.0" prefWidth="780.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="192.0" layoutY="32.0" text="INDIVIDUAL CUSTOMERS " textFill="#f9aa33">
+               <font>
+                  <Font name="Arial Bold" size="32.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblIdErrordelIn" layoutX="575.0" layoutY="66.0" prefHeight="19.0" prefWidth="162.0" textFill="#30f755">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableIndividualCustomerManege" layoutX="34.0" layoutY="90.0" prefHeight="153.0" prefWidth="710.0" style="-fx-background-color: AAC4FF; -fx-border-color: E97777;" stylesheets="@style.css" AnchorPane.bottomAnchor="337.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="86.0">
+               <columns>
+                  <TableColumn fx:id="tableID1" editable="false" prefWidth="48.80002021789551" sortable="false" styleClass="Border" text="ID" />
+                  <TableColumn fx:id="tableName1" editable="false" prefWidth="112.0000228881836" sortable="false" styleClass="Border" text="Full Name" />
+                  <TableColumn fx:id="tableAddress1" editable="false" prefWidth="149.5999755859375" sortable="false" styleClass="Border" text="Address" />
+                  <TableColumn fx:id="tableIDNo1" editable="false" prefWidth="111.199951171875" sortable="false" styleClass="Border" text="ID Number" />
+                  <TableColumn fx:id="tablePhone1" editable="false" prefWidth="109.60006713867188" sortable="false" styleClass="Border" text="Phone" />
+                  <TableColumn fx:id="tableEmail1" editable="false" prefWidth="108.800048828125" sortable="false" styleClass="Border" text="Email" />
+                  <TableColumn fx:id="tableDate1" prefWidth="62.4000244140625" styleClass="Border" text="Date" />
+               </columns>
+            </TableView>
+            <TableView fx:id="tableCompanyCustomerManage" layoutX="33.0" layoutY="346.0" prefHeight="161.0" prefWidth="717.0" style="-fx-background-color: AAC4FF; -fx-border-color: E97777;" stylesheets="@style.css" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="346.0">
+               <columns>
+                  <TableColumn fx:id="tableCompanyID1" editable="false" prefWidth="32.80002021789551" sortable="false" styleClass="companyBorder" text="ID" />
+                  <TableColumn fx:id="tableCompanyName1" editable="false" prefWidth="102.3999252319336" sortable="false" styleClass="companyBorder" text="Company Name" />
+                  <TableColumn fx:id="tableCompanyAddress1" editable="false" prefWidth="124.0" sortable="false" styleClass="companyBorder" text="Address" />
+                  <TableColumn fx:id="tableCompanyPhone1" editable="false" prefWidth="101.60003662109375" sortable="false" styleClass="companyBorder" text="phone" />
+                  <TableColumn fx:id="tableCompanyEmail1" editable="false" prefWidth="106.39996337890625" sortable="false" styleClass="companyBorder" text="Email" />
+                  <TableColumn fx:id="tableCompanyOrdererDesignation1" editable="false" prefWidth="91.20004272460938" sortable="false" styleClass="companyBorder" text="Desig. Orderer" />
+                  <TableColumn fx:id="tableCompanyOrdererID1" prefWidth="84.79998779296875" styleClass="companyBorder" text="Orderer ID" />
+                  <TableColumn fx:id="tableCompanyDate1" prefWidth="70.400146484375" styleClass="companyBorder" text="Date" />
+               </columns>
+            </TableView>
+            <Button fx:id="btnDeleteCompany" layoutX="598.0" layoutY="511.0" mnemonicParsing="false" onAction="#deleteCm" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #402211; -fx-background-radius: 30; -fx-border-color: red; -fx-border-radius: 30;" text="DELETE" textFill="#f9aa33">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnDeleteIndividual" layoutX="592.0" layoutY="250.0" mnemonicParsing="false" onAction="#deleteIn" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #402211; -fx-background-radius: 30; -fx-border-color: red; -fx-border-radius: 30;" text="DELETE" textFill="#f9aa33">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="198.0" layoutY="288.0" prefHeight="38.0" prefWidth="396.0" text="COMPANY CUSTOMERS " textFill="#f9aa33" AnchorPane.leftAnchor="197.0" AnchorPane.rightAnchor="187.0">
+               <font>
+                  <Font name="Arial Bold" size="32.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblIdErrordelCm1" layoutX="578.0" layoutY="326.0" prefHeight="19.0" prefWidth="162.0" textFill="#30f755">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lb1" layoutX="34.0" layoutY="66.0" prefHeight="18.0" prefWidth="162.0" textFill="#ff1b1b">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lb2" layoutX="34.0" layoutY="327.0" prefHeight="18.0" prefWidth="162.0" textFill="#ff0404">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneAllUsers" layoutX="10.0" layoutY="10.0" opacity="0.93" prefHeight="576.0" prefWidth="780.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" stylesheets="@style.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="230.0" layoutY="33.0" text="ALL CUSTOMERS " textFill="#f9aa33">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblIdErrorUpdate1" layoutX="238.0" layoutY="85.0" prefHeight="18.0" prefWidth="259.0" textFill="RED">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableIndividualCustomer" layoutX="29.0" layoutY="191.0" prefHeight="352.0" prefWidth="723.0" style="-fx-background-color: AAC4FF; -fx-border-color: E97777;" stylesheets="@style.css" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="191.0">
+               <columns>
+                  <TableColumn fx:id="tableID" editable="false" prefWidth="48.80002021789551" sortable="false" styleClass="Border" text="ID" />
+                  <TableColumn fx:id="tableName" editable="false" prefWidth="112.0000228881836" sortable="false" styleClass="Border" text="Full Name" />
+                  <TableColumn fx:id="tableAddress" editable="false" prefWidth="149.5999755859375" sortable="false" styleClass="Border" text="Address" />
+                  <TableColumn fx:id="tableIDNo" editable="false" prefWidth="111.199951171875" sortable="false" styleClass="Border" text="ID Number" />
+                  <TableColumn fx:id="tablePhone" editable="false" prefWidth="109.60006713867188" sortable="false" styleClass="Border" text="Phone" />
+                  <TableColumn fx:id="tableEmail" editable="false" prefWidth="108.800048828125" sortable="false" styleClass="Border" text="Email" />
+                  <TableColumn fx:id="tableDate" prefWidth="93.5999755859375" styleClass="Border" text="Date" />
+               </columns>
+            </TableView>
+            <Button fx:id="btnindividualTable" cache="true" layoutX="28.0" layoutY="119.0" mnemonicParsing="false" onAction="#showAllTableIndividual" prefHeight="30.0" prefWidth="146.0" style="-fx-background-color: #D9CB50; -fx-background-radius: 30;" text="INDIVIDUAL CUSTOMERS" textFill="#030302">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnCompanyTable" cache="true" layoutX="232.0" layoutY="119.0" mnemonicParsing="false" onAction="#showAllTableCompany" prefHeight="30.0" prefWidth="146.0" style="-fx-background-color: #D9CB50; -fx-background-radius: 30;" text="COMPANY CUSTOMERS" textFill="#030302">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Rectangle fx:id="rec12" arcHeight="5.0" arcWidth="5.0" fill="#fae73e" height="5.0" layoutX="37.0" layoutY="157.0" strokeType="INSIDE" width="128.0" />
+            <Rectangle fx:id="rec22" arcHeight="5.0" arcWidth="5.0" fill="#fae73e" height="5.0" layoutX="241.0" layoutY="157.0" strokeType="INSIDE" width="128.0" />
+            <TableView fx:id="tableCompanyCustomer" layoutX="38.0" layoutY="191.0" prefHeight="352.0" prefWidth="723.0" style="-fx-background-color: AAC4FF; -fx-border-color: E97777;" stylesheets="@style.css" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="191.0">
+               <columns>
+                  <TableColumn fx:id="tableCompanyID" editable="false" prefWidth="32.80002021789551" sortable="false" styleClass="companyBorder" text="ID" />
+                  <TableColumn fx:id="tableCompanyName" editable="false" prefWidth="102.3999252319336" sortable="false" styleClass="companyBorder" text="Company Name" />
+                  <TableColumn fx:id="tableCompanyAddress" editable="false" prefWidth="124.0" sortable="false" styleClass="companyBorder" text="Address" />
+                  <TableColumn fx:id="tableCompanyPhone" editable="false" prefWidth="101.60003662109375" sortable="false" styleClass="companyBorder" text="phone" />
+                  <TableColumn fx:id="tableCompanyEmail" editable="false" prefWidth="106.39996337890625" sortable="false" styleClass="companyBorder" text="Email" />
+                  <TableColumn fx:id="tableCompanyOrdererDesignation" editable="false" prefWidth="91.20004272460938" sortable="false" styleClass="companyBorder" text="Desig. Orderer" />
+                  <TableColumn fx:id="tableCompanyOrdererID" prefWidth="84.79998779296875" styleClass="companyBorder" text="Orderer ID" />
+                  <TableColumn fx:id="tableCompanyDate" prefWidth="70.400146484375" styleClass="companyBorder" text="Date" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

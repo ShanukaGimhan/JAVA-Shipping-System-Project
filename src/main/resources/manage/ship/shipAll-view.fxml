@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneAllShip" opacity="0.93" prefHeight="576.0" prefWidth="780.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="271.0" layoutY="34.0" text="ALL SHIPS" textFill="#f9aa33">
+         <font>
+            <Font name="Arial Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblIdErrorUpdate" layoutX="238.0" layoutY="85.0" prefHeight="18.0" prefWidth="259.0" textFill="RED">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <TableView fixedCellSize="1.0" layoutX="27.0" layoutY="101.0" prefHeight="441.0" prefWidth="726.0" style="-fx-background-color: AAC4FF; -fx-border-color: E97777;" stylesheets="@style.css" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.600000000000023">
+         <columns>
+            <TableColumn fx:id="shipID" editable="false" prefWidth="48.79998970031738" sortable="false" styleClass="Border2" text="Ship ID" />
+            <TableColumn fx:id="shipName" editable="false" prefWidth="125.59996795654297" sortable="false" styleClass="Border2" text="Ship Name" />
+            <TableColumn fx:id="shipCountry" editable="false" prefWidth="118.39996337890625" sortable="false" styleClass="Border2" text="Belong Country" />
+            <TableColumn fx:id="shipCompany" editable="false" prefWidth="136.0" sortable="false" styleClass="Border2" text="Company Name" />
+            <TableColumn fx:id="shipPhone" editable="false" prefWidth="113.60006713867188" sortable="false" styleClass="Border2" text="Phone" />
+            <TableColumn fx:id="shipCaptain" editable="false" prefWidth="102.39996337890625" sortable="false" styleClass="Border2" text="Captain Name" />
+            <TableColumn fx:id="shipDate" prefWidth="86.4000244140625" styleClass="Border2" text="Date" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneOrderIndividual" opacity="0.93" prefHeight="576.0" prefWidth="780.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" styleClass="Prompt" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="85.0" layoutY="135.0" text="Full Name" textFill="WHITE">
+         <font>
+            <Font name="AIGDT" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="281.0" text="Weight" textFill="WHITE">
+         <font>
+            <Font name="AIGDT" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="333.0" text="Price Rs." textFill="WHITE">
+         <font>
+            <Font name="AIGDT" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPrice" layoutX="240.0" layoutY="334.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnSave" layoutX="240.0" layoutY="482.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #402211; -fx-background-radius: 30;" text="SAVE" textFill="#f9aa33">
+         <font>
+            <Font name="Candara Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnClear" cache="true" layoutX="430.0" layoutY="482.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #544f59; -fx-background-radius: 30;" text="CLEAR" textFill="#ffba52">
+         <font>
+            <Font name="Candara Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="85.0" layoutY="183.0" text="ID Number" textFill="WHITE">
+         <font>
+            <Font name="AIGDT" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="387.0" text="Date" textFill="WHITE">
+         <font>
+            <Font name="AIGDT" size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateOrderIndividual" blendMode="DIFFERENCE" layoutX="240.0" layoutY="388.0" promptText="SELECT DATE" showWeekNumbers="true" style="-fx-background-color: red;" styleClass="date" stylesheets="@style.css">
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </DatePicker>
+      <Label fx:id="lblErro" layoutX="415.0" layoutY="109.0" prefHeight="18.0" prefWidth="285.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="128.0" layoutY="38.0" prefHeight="42.0" prefWidth="574.0" text="INDIVIDUAL CUSTOMER ORDER" textAlignment="CENTER" textFill="#f9aa33">
+         <font>
+            <Font name="Arial Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnOrderIndividualBill" cache="true" layoutX="620.0" layoutY="482.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="104.0" style="-fx-background-color: white; -fx-background-radius: 30;" text="PRINT BILL">
+         <font>
+            <Font name="Candara Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ComboBox fx:id="comboWeight" layoutX="240.0" layoutY="285.0" prefHeight="26.0" prefWidth="240.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" />
+      <Button fx:id="btnWeight" layoutX="523.0" layoutY="284.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="175.0" style="-fx-background-color: #160BBA; -fx-background-radius: 30;" text="CALCULATE PRICE" textFill="WHITE">
+         <font>
+            <Font name="Candara Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ComboBox fx:id="comboName" cache="true" layoutX="240.0" layoutY="138.0" prefHeight="27.0" prefWidth="293.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" stylesheets="@style.css" />
+      <ComboBox fx:id="comboID" layoutX="240.0" layoutY="186.0" prefHeight="27.0" prefWidth="294.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" />
+      <ComboBox fx:id="comboCategory" layoutX="239.0" layoutY="235.0" prefHeight="27.0" prefWidth="294.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" />
+      <Label layoutX="85.0" layoutY="232.0" text="Category" textFill="WHITE">
+         <font>
+            <Font name="AIGDT" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

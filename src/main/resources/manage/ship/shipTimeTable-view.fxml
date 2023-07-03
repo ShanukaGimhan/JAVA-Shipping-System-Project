@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="customerMainPane" prefHeight="576.0" prefWidth="1000.0" style="-fx-background-color: #263650; -fx-border-color: A58FAA;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manage.ship.controllers.CustomerMainController">
+   <children>
+      <Button fx:id="btnBack" graphicTextGap="2.0" layoutX="60.0" layoutY="509.0" lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="101.0" style="-fx-background-color: #1C9C47; -fx-background-radius: 30;" text="BACK" textAlignment="CENTER" textFill="#282525" textOverrun="CLIP">
+         <font>
+            <Font name="Candara Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

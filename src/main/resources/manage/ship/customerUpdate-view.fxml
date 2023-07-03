@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="panecustomerUpdateIndividual" opacity="0.93" prefHeight="576.0" prefWidth="780.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="85.0" layoutY="242.0" text="Full Name" textFill="WHITE">
+         <font>
+            <Font name="AIGDT" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="292.0" text="Address" textFill="WHITE">
+         <font>
+            <Font name="AIGDT" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="341.0" text="Phone" textFill="WHITE">
+         <font>
+            <Font name="AIGDT" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="391.0" text="Email" textFill="WHITE">
+         <font>
+            <Font name="AIGDT" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtIndividualFullNameUpdate" layoutX="240.0" layoutY="243.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" styleClass="aaa">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtIndividualAddressUpdate" layoutX="240.0" layoutY="293.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtIndividualIDnoUpdate" layoutX="240.0" layoutY="194.0" prefHeight="27.0" prefWidth="251.0" promptText="ENTER CUSTOMER ID NUMBER" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtIndividualPhoneUpdate" layoutX="240.0" layoutY="342.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtIndividualMailUpdate" layoutX="240.0" layoutY="392.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnIndividualUpdateSave" layoutX="286.0" layoutY="510.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #402211; -fx-background-radius: 30;" text="SAVE" textFill="#f9aa33">
+         <font>
+            <Font name="Candara Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnIndividualUpdateClear" cache="true" layoutX="523.0" layoutY="510.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #544f59; -fx-background-radius: 30;" text="CLEAR" textFill="#ffba52">
+         <font>
+            <Font name="Candara Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="85.0" layoutY="191.0" text="ID Number" textFill="WHITE">
+         <font>
+            <Font name="AIGDT" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="441.0" text="Date" textFill="WHITE">
+         <font>
+            <Font name="AIGDT" size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateIndividualUpdate" blendMode="DIFFERENCE" layoutX="240.0" layoutY="442.0" promptText="SELECT DATE" showWeekNumbers="true" style="-fx-background-color: red;" styleClass="date" stylesheets="@style.css">
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </DatePicker>
+      <Label layoutX="212.0" layoutY="36.0" prefHeight="42.0" prefWidth="380.0" text="CUSTOMER UPDATE" textAlignment="CENTER" textFill="#f9aa33">
+         <font>
+            <Font name="Arial Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnSelectIndividualCustomer" cache="true" layoutX="84.0" layoutY="103.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #D9CB50; -fx-background-radius: 30;" text="INDIVIDUAL CUSTOMER" textFill="#030302">
+         <font>
+            <Font name="Candara Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnSerchIndividualCustomer" layoutX="523.0" layoutY="194.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="175.0" style="-fx-background-color: #160BBA; -fx-background-radius: 30;" text="SEARCH CUSTOMER" textFill="WHITE">
+         <font>
+            <Font name="Candara Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <AnchorPane fx:id="paneCompanyCustomerUpdate" layoutX="3.0" layoutY="152.0" prefHeight="418.0" prefWidth="780.0" style="-fx-background-color: #263650;">
+         <children>
+            <Label layoutX="200.0" layoutY="204.0" text="Designation Of Orderer" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="105.0" layoutY="59.0" text="Address" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="105.0" layoutY="107.0" text="Phone" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="105.0" layoutY="155.0" text="Email" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCompanyDesignationUpdate" layoutX="432.0" layoutY="205.0" prefHeight="27.0" prefWidth="290.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" styleClass="aaa">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtCompanyAddressUpdate" layoutX="260.0" layoutY="60.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtCompanyNameUpdate" layoutX="260.0" layoutY="12.0" prefHeight="27.0" prefWidth="251.0" promptText="ENTER COMPANY NAME" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtCompanyPhoneUpdate" layoutX="260.0" layoutY="108.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtCompanyMailUpdate" layoutX="260.0" layoutY="156.0" prefHeight="27.0" prefWidth="462.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtCompanyOrdererUpdate" layoutX="433.0" layoutY="255.0" prefHeight="27.0" prefWidth="290.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" styleClass="aaa">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnCompanyUpdateSave" layoutX="306.0" layoutY="369.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #402211; -fx-background-radius: 30;" text="SAVE" textFill="#f9aa33">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnCompanyUpdateClear" cache="true" layoutX="543.0" layoutY="369.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #544f59; -fx-background-radius: 30;" text="CLEAR" textFill="#ffba52">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="105.0" layoutY="9.0" text="Company Name" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="105.0" layoutY="311.0" text="Date" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dataCompanyUpdate" blendMode="DIFFERENCE" layoutX="260.0" layoutY="312.0" promptText="SELECT DATE" showWeekNumbers="true" style="-fx-background-color: red;" styleClass="date" stylesheets="@style.css">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </DatePicker>
+            <Button fx:id="btnSerchCompanyCustomer" layoutX="535.0" layoutY="12.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="186.0" style="-fx-background-color: #160BBA; -fx-background-radius: 30;" text="SEARCH COMPANY" textFill="WHITE">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="200.0" layoutY="254.0" text="ID Number Of Orderer" textFill="WHITE">
+               <font>
+                  <Font name="AIGDT" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnSelectCompanyCustomer" cache="true" layoutX="264.0" layoutY="103.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #D9CB50; -fx-background-radius: 30;" text="COMPANY CUSTOMER" textFill="#030302">
+         <font>
+            <Font name="Candara Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Rectangle fx:id="rec1" arcHeight="5.0" arcWidth="5.0" fill="#fae73e" height="5.0" layoutX="96.0" layoutY="141.0" strokeType="INSIDE" width="126.0" />
+      <Rectangle fx:id="rec2" arcHeight="5.0" arcWidth="5.0" fill="#fae73e" height="5.0" layoutX="276.0" layoutY="141.0" strokeType="INSIDE" width="126.0" />
+   </children>
+</AnchorPane>

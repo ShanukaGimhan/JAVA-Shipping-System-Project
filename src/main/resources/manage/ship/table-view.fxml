@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="tablePane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manage.ship.controllers.StudentController">
+   <children>
+      <TableView fx:id="tableView" layoutY="44.0" prefHeight="329.0" prefWidth="800.0">
+        <columns>
+          <TableColumn fx:id="tableID" prefWidth="212.79998779296875" text="ID" />
+          <TableColumn fx:id="tableName" prefWidth="282.4000244140625" text="Name" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnDelete" layoutX="277.0" layoutY="413.0" mnemonicParsing="false" onAction="#delData" prefHeight="41.0" prefWidth="166.0" text="DELETE" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="576.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manage.ship.controllers.UserAllController">
+   <children>
+      <AnchorPane fx:id="paneAllUsers" opacity="0.93" prefHeight="576.0" prefWidth="780.0" style="-fx-background-color: #263650; -fx-border-color: #f9aa33;" stylesheets="@style.css">
+         <children>
+            <Label layoutX="271.0" layoutY="34.0" text="ALL USERS" textFill="#f9aa33">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblIdErrorUpdate" layoutX="238.0" layoutY="85.0" prefHeight="18.0" prefWidth="259.0" textFill="RED">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <TableView layoutX="27.0" layoutY="101.0" prefHeight="441.0" prefWidth="726.0" style="-fx-background-color: AAC4FF; -fx-border-color: E97777;" stylesheets="@style.css" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.600000000000023">
+              <columns>
+                <TableColumn editable="false" prefWidth="79.19998359680176" sortable="false" styleClass="Border" text="User ID" />
+                <TableColumn editable="false" prefWidth="124.80001068115234" sortable="false" styleClass="Border" text="Full Name" />
+                  <TableColumn editable="false" prefWidth="166.4000244140625" sortable="false" styleClass="Border" text="Address" />
+                  <TableColumn editable="false" prefWidth="95.99993896484375" sortable="false" styleClass="Border" text="ID Number" />
+                  <TableColumn editable="false" prefWidth="124.80007934570312" sortable="false" styleClass="Border" text="Email" />
+                  <TableColumn editable="false" prefWidth="79.199951171875" sortable="false" styleClass="Border" text="User Name" />
+                  <TableColumn fx:id="userRole" prefWidth="50.19992675781248" styleClass="Border" text="role" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

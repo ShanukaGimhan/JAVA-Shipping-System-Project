@@ -1,0 +1,29 @@
+TextField{
+   -fx-text-fill:white
+}
+
+.Border{
+  -fx-border-color:green
+}
+
+.Border2{
+    -fx-border-color:purple
+}
+
+.text{
+  -fx-text-fill:white
+}
+
+.date{
+    -fx-primary-color: red;
+	-fx-secondary-color: red;
+	-fx-light-grey-color: red;
+}
+
+.companyBorder{
+    -fx-border-color:blue
+}
+
+.Prompt{
+    -fx-prompt-text-fill: red;
+}
